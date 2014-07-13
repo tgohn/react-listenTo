@@ -4,7 +4,7 @@
   "description": " mixin for React.js that provide easy event binding",
   "main": "listenTo.js",
   "scripts": {
-    "test": "karma start"
+    "test": "./node_modules/karma/bin/karma start"
   },
   "repository": {
     "type": "git",
