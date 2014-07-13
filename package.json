@@ -4,7 +4,7 @@
   "description": " mixin for React.js that provide easy event binding",
   "main": "listenTo.js",
   "scripts": {
-    "test": "make test"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,17 @@
     "listenTo"
   ],
   "author": "tgohn",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^4.2.0",
+    "envify": "^1.2.1",
+    "karma": "^0.12.16",
+    "karma-browserify": "^0.2.1",
+    "karma-mocha": "^0.1.4",
+    "karma-mocha-reporter": "^0.2.8",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "mocha": "^1.20.1",
+    "react": "^0.10.0",
+    "sinon": "^1.10.2"
+  }
 }
