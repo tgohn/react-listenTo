@@ -1,5 +1,5 @@
 {
-  "name": "react-listenTo",
+  "name": "react-listento",
   "version": "0.1.0",
   "description": " mixin for React.js that provide easy event binding",
   "main": "listenTo.js",
