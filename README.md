@@ -19,7 +19,7 @@ var video = require('video-player');
 var listenTo = require('react-listenTo');
 
 var FastForwardButton = React.createClass({
-	mixins: [listnTo],
+	mixins: [listenTo],
 
 	componentDidMount: function() {
 		this.listenTo(video, 'playbackRate', this.updatePlaybackRate);
