@@ -67,6 +67,17 @@ describe('listenTo - browser', function() {
 			}, 100);
 		});
 
+		it('should remove handler that has not been created', function(done) {
+			comp.noListenTo(emitter, 'ding', spy);
+
+			emitter.emit('ding');
+
+			setTimeout(function() {
+				assert.ok(!spy.called);
+				done();
+			}, 100);
+		});
+
 		it('can remove all attached handler of a emitter\'s specific event', function(done) {
 			comp.listenTo(emitter, 'ding', spy);
 			comp.listenTo(emitter, 'ding', spy);
@@ -106,6 +117,10 @@ describe('listenTo - browser', function() {
 				comp = this;
 				done();
 			});
+		});
+
+		it('should not throw if no handler was attached', function() {
+			React.unmountComponentAtNode(document.body);
 		});
 
 		it('should remove all attached handlers', function() {

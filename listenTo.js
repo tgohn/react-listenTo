@@ -56,7 +56,11 @@ var Mixin = {
 	},
 
 	componentWillUnmount: function() {
-		this._listeningTo.forEach(function(data) {
+		var listeningTo = this._listeningTo;
+
+		if (!listeningTo || !listeningTo.length) return this;
+
+		listeningTo.forEach(function(data) {
 			unbindEvent(data.emitter, data.evtName, data.cb);
 		});
 
